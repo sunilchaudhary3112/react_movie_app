@@ -11,10 +11,11 @@ const Sidebar = ({ currentTab, setCurrentTab }) => {
             <h1>MovieFlix</h1>
             <ul>
                 {
-                    side.map((item, index) => <li key={index} onClick={() => setCurrentTab(index)}></li>)
+                    side.map((item, index) => <li className={currentTab == index ? 'curentTab' : ''} key={index} onClick={() => setCurrentTab(index)}>
+                        {item}
+                    </li>)
                 }
             </ul>
-            Sidebar
         </div>
     )
 }
